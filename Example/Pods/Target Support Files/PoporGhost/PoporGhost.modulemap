@@ -1,0 +1,6 @@
+framework module PoporGhost {
+  umbrella header "PoporGhost-umbrella.h"
+
+  export *
+  module * { export * }
+}

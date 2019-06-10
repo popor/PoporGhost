@@ -1,0 +1,22 @@
+{
+  "name": "PoporGhost",
+  "version": "0.1.0",
+  "summary": "A short description of PoporGhost.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/popor/PoporGhost",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "popor": "908891024@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/popor/PoporGhost.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PoporGhost/Classes/**/*"
+}
