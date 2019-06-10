@@ -27,41 +27,39 @@ pod 'PoporGhost'
 #import <ReactiveObjC/ReactiveObjC.h>
 
 - (void)ghostAction {
+	// 防止block循环引用
+	@weakify(self);
+	PoporGhostBlockRestore blockRestore;
+	PoporGhostBlockVoid blockDisappear;
+	
+	// 恢复block
+	blockRestore = ^(NSDictionary * restoreDic, NSString * description, NSString * time, NSString * 	version) {
+		@strongify(self);
+		self.testEntity = [TestEntity yy_modelWithDictionary:restoreDic];
+	
+		self.nameTF.text = self.testEntity.name;
+		self.addTF.text  = self.testEntity.add;
+	
+		[self.navigationController popViewControllerAnimated:YES];
+	};
+	
+	// ghost页面关闭block
+	blockDisappear = ^(void) { };
+	
+	self.testEntity.name = self.nameTF.text;
+	self.testEntity.add  = self.addTF.text;
 
-// 防止block循环引用
-@weakify(self);
-PoporGhostBlockRestore blockRestore;
-PoporGhostBlockVoid blockDisappear;
-
-// 恢复block
-blockRestore = ^(NSDictionary * restoreDic, NSString * description, NSString * time, NSString * version) {
-	@strongify(self);
-	self.testEntity = [TestEntity yy_modelWithDictionary:restoreDic];
-
-	self.nameTF.text = self.testEntity.name;
-	self.addTF.text  = self.testEntity.add;
-
-	[self.navigationController popViewControllerAnimated:YES];
-};
-
-// ghost页面关闭block
-blockDisappear = ^(void) { };
-
-self.testEntity.name = self.nameTF.text;
-self.testEntity.add  = self.addTF.text;
-
-// 设置dic
-NSDictionary * dic;
-dic = @{
-	@"blockRestore":blockRestore,
-	@"blockDisappear":blockDisappear,
-	@"title":@"记录", // 下个页面title
-	@"saveKey":NSStringFromClass(self.view.class), // yyCache保存到磁盘的key
-	@"saveDic":self.testEntity.yy_modelToJSONObject, // 需要保存的dic
-};
-
-[self.navigationController pushViewController:[[PoporGhost alloc] initWithDic:dic]  animated:YES];
-
+	// 设置dic
+	NSDictionary * dic;
+	dic = @{
+		@"blockRestore":blockRestore,
+		@"blockDisappear":blockDisappear,
+		@"title":@"记录", // 下个页面title
+		@"saveKey":NSStringFromClass(self.view.class), // yyCache保存到磁盘的key
+		@"saveDic":self.testEntity.yy_modelToJSONObject, // 需要保存的dic
+	};
+	
+	[self.navigationController pushViewController:[[PoporGhost alloc] initWithDic:dic]  animated:YES];
 }
 
 
