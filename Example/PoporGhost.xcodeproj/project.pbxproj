@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A26EC822ADF7EB00CF4868 /* PoporGhostListEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A26EC722ADF7EB00CF4868 /* PoporGhostListEntity.m */; };
+		18A26ECE22ADF80A00CF4868 /* PoporGhost.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A26EC922ADF80900CF4868 /* PoporGhost.m */; };
+		18A26ECF22ADF80A00CF4868 /* PoporGhostListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A26ECC22ADF80900CF4868 /* PoporGhostListCell.m */; };
+		18A26ED222ADF81100CF4868 /* PoporGhostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A26ED122ADF81100CF4868 /* PoporGhostPresenter.m */; };
+		18A26ED522ADF81800CF4868 /* PoporGhostInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A26ED422ADF81800CF4868 /* PoporGhostInteractor.m */; };
+		18A26EDB22ADF94200CF4868 /* TestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A26EDA22ADF94200CF4868 /* TestEntity.m */; };
 		253232602893D27D34DEC29B /* Pods_PoporGhost_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5555788191BE106A81662CBF /* Pods_PoporGhost_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -38,8 +44,21 @@
 
 /* Begin PBXFileReference section */
 		0C8FDAE75F94D360296399E9 /* Pods-PoporGhost_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporGhost_Tests.release.xcconfig"; path = "Target Support Files/Pods-PoporGhost_Tests/Pods-PoporGhost_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		12A63064046DCBBFDA5A5D5E /* PoporGhost.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PoporGhost.podspec; path = ../PoporGhost.podspec; sourceTree = "<group>"; };
+		12A63064046DCBBFDA5A5D5E /* PoporGhost.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PoporGhost.podspec; path = ../PoporGhost.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		17C6694415C16540FAF3415E /* Pods-PoporGhost_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporGhost_Example.debug.xcconfig"; path = "Target Support Files/Pods-PoporGhost_Example/Pods-PoporGhost_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		18A26EC622ADF7EB00CF4868 /* PoporGhostListEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporGhostListEntity.h; sourceTree = "<group>"; };
+		18A26EC722ADF7EB00CF4868 /* PoporGhostListEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporGhostListEntity.m; sourceTree = "<group>"; };
+		18A26EC922ADF80900CF4868 /* PoporGhost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporGhost.m; sourceTree = "<group>"; };
+		18A26ECA22ADF80900CF4868 /* PoporGhostListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporGhostListCell.h; sourceTree = "<group>"; };
+		18A26ECB22ADF80900CF4868 /* PoporGhost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporGhost.h; sourceTree = "<group>"; };
+		18A26ECC22ADF80900CF4868 /* PoporGhostListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporGhostListCell.m; sourceTree = "<group>"; };
+		18A26ECD22ADF80A00CF4868 /* PoporGhostProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporGhostProtocol.h; sourceTree = "<group>"; };
+		18A26ED022ADF81100CF4868 /* PoporGhostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporGhostPresenter.h; sourceTree = "<group>"; };
+		18A26ED122ADF81100CF4868 /* PoporGhostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporGhostPresenter.m; sourceTree = "<group>"; };
+		18A26ED322ADF81800CF4868 /* PoporGhostInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporGhostInteractor.h; sourceTree = "<group>"; };
+		18A26ED422ADF81800CF4868 /* PoporGhostInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporGhostInteractor.m; sourceTree = "<group>"; };
+		18A26ED922ADF94200CF4868 /* TestEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestEntity.h; sourceTree = "<group>"; };
+		18A26EDA22ADF94200CF4868 /* TestEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestEntity.m; sourceTree = "<group>"; };
 		2B6830477F55E9F35E9C4234 /* Pods-PoporGhost_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporGhost_Example.release.xcconfig"; path = "Target Support Files/Pods-PoporGhost_Example/Pods-PoporGhost_Example.release.xcconfig"; sourceTree = "<group>"; };
 		51B545C1379C654B0C05FB0D /* Pods_PoporGhost_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporGhost_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5555788191BE106A81662CBF /* Pods_PoporGhost_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoporGhost_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,10 +81,10 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		694725A2C1AC90EB63D36991 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		694725A2C1AC90EB63D36991 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C8F166B65563C4963B08E04F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C8F166B65563C4963B08E04F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F5A6998822314891E77F8BFC /* Pods-PoporGhost_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporGhost_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PoporGhost_Tests/Pods-PoporGhost_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,13 +122,84 @@
 				F5A6998822314891E77F8BFC /* Pods-PoporGhost_Tests.debug.xcconfig */,
 				0C8FDAE75F94D360296399E9 /* Pods-PoporGhost_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		18A26EA622ADF21D00CF4868 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18A26EA722ADF21D00CF4868 /* PoporGhost */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		18A26EA722ADF21D00CF4868 /* PoporGhost */ = {
+			isa = PBXGroup;
+			children = (
+				18A26EC122ADF7B400CF4868 /* entity */,
+				18A26EC522ADF7CA00CF4868 /* view */,
+				18A26EC422ADF7C800CF4868 /* present */,
+				18A26EC322ADF7C500CF4868 /* interacter */,
+			);
+			path = PoporGhost;
+			sourceTree = "<group>";
+		};
+		18A26EC022ADF2B600CF4868 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* PoporGhostAppDelegate.h */,
+				6003F59D195388D20070C39A /* PoporGhostAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		18A26EC122ADF7B400CF4868 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				18A26EC622ADF7EB00CF4868 /* PoporGhostListEntity.h */,
+				18A26EC722ADF7EB00CF4868 /* PoporGhostListEntity.m */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		18A26EC322ADF7C500CF4868 /* interacter */ = {
+			isa = PBXGroup;
+			children = (
+				18A26ED322ADF81800CF4868 /* PoporGhostInteractor.h */,
+				18A26ED422ADF81800CF4868 /* PoporGhostInteractor.m */,
+			);
+			name = interacter;
+			sourceTree = "<group>";
+		};
+		18A26EC422ADF7C800CF4868 /* present */ = {
+			isa = PBXGroup;
+			children = (
+				18A26ED022ADF81100CF4868 /* PoporGhostPresenter.h */,
+				18A26ED122ADF81100CF4868 /* PoporGhostPresenter.m */,
+			);
+			name = present;
+			sourceTree = "<group>";
+		};
+		18A26EC522ADF7CA00CF4868 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				18A26ECB22ADF80900CF4868 /* PoporGhost.h */,
+				18A26EC922ADF80900CF4868 /* PoporGhost.m */,
+				18A26ECD22ADF80A00CF4868 /* PoporGhostProtocol.h */,
+				18A26ECA22ADF80900CF4868 /* PoporGhostListCell.h */,
+				18A26ECC22ADF80900CF4868 /* PoporGhostListCell.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				18A26EA622ADF21D00CF4868 /* Classes */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for PoporGhost */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -144,14 +234,11 @@
 		6003F593195388D20070C39A /* Example for PoporGhost */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* PoporGhostAppDelegate.h */,
-				6003F59D195388D20070C39A /* PoporGhostAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				18A26EC022ADF2B600CF4868 /* other */,
 				6003F5A5195388D20070C39A /* PoporGhostViewController.h */,
 				6003F5A6195388D20070C39A /* PoporGhostViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
+				18A26ED922ADF94200CF4868 /* TestEntity.h */,
+				18A26EDA22ADF94200CF4868 /* TestEntity.m */,
 			);
 			name = "Example for PoporGhost";
 			path = PoporGhost;
@@ -258,6 +345,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -302,11 +390,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PoporGhost_Example/Pods-PoporGhost_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/PoporFoundation/PoporFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/PoporGhost/PoporGhost.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PoporGhost.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,8 +463,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* PoporGhostAppDelegate.m in Sources */,
+				18A26ED522ADF81800CF4868 /* PoporGhostInteractor.m in Sources */,
 				6003F5A7195388D20070C39A /* PoporGhostViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				18A26ECE22ADF80A00CF4868 /* PoporGhost.m in Sources */,
+				18A26EDB22ADF94200CF4868 /* TestEntity.m in Sources */,
+				18A26ECF22ADF80A00CF4868 /* PoporGhostListCell.m in Sources */,
+				18A26ED222ADF81100CF4868 /* PoporGhostPresenter.m in Sources */,
+				18A26EC822ADF7EB00CF4868 /* PoporGhostListEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
