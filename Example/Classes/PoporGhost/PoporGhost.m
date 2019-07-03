@@ -7,6 +7,7 @@
 
 #import "PoporGhost.h"
 #import "PoporGhostPresenter.h"
+#import "PoporGhostInteractor.h"
 #import <Masonry/Masonry.h>
 
 @interface PoporGhost ()
@@ -43,19 +44,13 @@
 }
 
 - (void)viewDidLoad {
+    [self assembleViper];
     [super viewDidLoad];
+    
     if (!self.title) {
         self.title = @"Ghost";
     }
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    if (!self.present) {
-        PoporGhostPresenter * present = [PoporGhostPresenter new];
-        self.present = present;
-        [present setMyView:self];
-    }
-    
-    [self addViews];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,7 +71,19 @@
     self.present = present;
 }
 
-#pragma mark - views
+- (void)assembleViper {
+    if (!self.present) {
+        PoporGhostPresenter * present = [PoporGhostPresenter new];
+        PoporGhostInteractor * interactor = [PoporGhostInteractor new];
+        
+        self.present = present;
+        [present setMyInteractor:interactor];
+        [present setMyView:self];
+        
+        [self addViews];
+    }
+}
+
 - (void)addViews {
     self.infoTV = [self addTVs];
     

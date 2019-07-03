@@ -21,21 +21,22 @@
 
 - (id)init {
     if (self = [super init]) {
-        [self initInteractors];
         
     }
     return self;
 }
 
-- (void)setMyView:(id<PoporGhostProtocol>)view {
-    self.view = view;
-    [self.interactor fetchArray:self.view.saveKey];
+// 初始化数据处理
+- (void)setMyInteractor:(PoporGhostInteractor *)interactor {
+    self.interactor = interactor;
+    
 }
 
-- (void)initInteractors {
-    if (!self.interactor) {
-        self.interactor = [PoporGhostInteractor new];
-    }
+// 很多操作,需要在设置了view之后才可以执行.
+- (void)setMyView:(id<PoporGhostProtocol>)view {
+    self.view = view;
+    
+    [self.interactor fetchArray:self.view.saveKey];
 }
 
 #pragma mark - VC_DataSource
