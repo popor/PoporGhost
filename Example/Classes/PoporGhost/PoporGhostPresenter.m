@@ -36,7 +36,12 @@
 - (void)setMyView:(id<PoporGhostProtocol>)view {
     self.view = view;
     
+}
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent {
     [self.interactor fetchArray:self.view.saveKey];
+    
 }
 
 #pragma mark - VC_DataSource

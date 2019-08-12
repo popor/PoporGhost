@@ -81,6 +81,7 @@
         [present setMyView:self];
         
         [self addViews];
+        [self startEvent];
     }
 }
 
@@ -91,6 +92,11 @@
         UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self.present action:@selector(backupAction)];
         self.navigationItem.rightBarButtonItems = @[item1];
     }
+}
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent {
+    [self.present startEvent];
 }
 
 - (UITableView *)addTVs {

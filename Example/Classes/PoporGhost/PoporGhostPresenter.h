@@ -11,10 +11,11 @@
 // 处理和View事件
 @interface PoporGhostPresenter : NSObject <PoporGhostEventHandler, PoporGhostDataSource, UITableViewDelegate, UITableViewDataSource>
 
-// 初始化数据处理
 - (void)setMyInteractor:(id)interactor;
 
-// 很多操作,需要在设置了view之后才可以执行.
 - (void)setMyView:(id)view;
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent;
 
 @end

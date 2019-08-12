@@ -5,7 +5,7 @@ PODS:
   - PoporFoundation/NSString (0.0.38):
     - PoporFoundation/PrefixOs
   - PoporFoundation/PrefixOs (0.0.38)
-  - PoporGhost (0.1.02):
+  - PoporGhost (0.1.03):
     - Masonry
     - PoporFoundation/NSDate
     - YYCache
@@ -33,11 +33,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PoporFoundation: 85f65b986fda7e86584c41efdeca8ce76b77bb04
-  PoporGhost: 3d40aca35f926f72d32f9b97124d039d998ea3b8
+  PoporGhost: 0eb7294dcc5c1721db0a203f3262a48ff48501c6
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: 87c60bd4222b095453dfebf98be488aa066b123f
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.7.5
