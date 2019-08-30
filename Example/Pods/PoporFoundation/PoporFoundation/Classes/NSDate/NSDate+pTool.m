@@ -1,12 +1,12 @@
 //
-//  NSDate+Tool.m
-//  Wanzi
+//  NSDate+pTool.m
+//  PoporFoundation
 //
 //  Created by popor on 2017/1/3.
 //  Copyright © 2017年 popor. All rights reserved.
 //
 
-#import "NSDate+Tool.h"
+#import "NSDate+pTool.h"
 
 #define GCCalendar          [GCObject shareGC].gregorianCalendar
 
@@ -21,7 +21,7 @@
 //
 //解决办法：
 //＃import ”宏定义所在的文件“
-#import "NSString+Tool.h"
+#import "NSString+pTool.h"
 
 // 不再采用系统默认日历,比如日本日历或者佛教日历,只是用公历
 @interface GCObject : NSObject
@@ -32,8 +32,7 @@
 
 @implementation GCObject
 
-+ (GCObject *)shareGC
-{
++ (GCObject *)shareGC {
     static GCObject * oneGC = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -48,11 +47,10 @@
 
 @end
 
-@implementation NSDate (Tool)
+@implementation NSDate (pTool)
 
 #pragma mark - 获取有期限日历
-+ (NSDateComponents *)compareDataFrom:(NSDate *)startData to:(NSDate *)endData
-{
++ (NSDateComponents *)compareDataFrom:(NSDate * _Nullable)startData to:(NSDate * _Nullable)endData {
     if(startData==nil || endData==nil){
         return nil;
     }
@@ -65,15 +63,13 @@
 }
 
 #pragma mark - 获取某个时期日历(NSString)
-+ (NSDateComponents *)dateComponentsFromString:(NSString *)InvalidTime
-{
++ (NSDateComponents *)dateComponentsFromString:(NSString * _Nullable)InvalidTime {
     NSDate *InvalidTimeDate = [NSDate dateWithTimeIntervalSince1970:[InvalidTime doubleValue]];
     return [NSDate dateComponentsFromDate:InvalidTimeDate];
 }
 
 #pragma mark - 获取某个时期日历(NSDate)
-+ (NSDateComponents *)dateComponentsFromDate:(NSDate *)InvalidTimeDate
-{
++ (NSDateComponents *)dateComponentsFromDate:(NSDate * _Nullable)InvalidTimeDate {
     //NSDate *InvalidTimeDate = [NSDate dateWithTimeIntervalSince1970:[InvalidTime doubleValue]];
     static unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitWeekday |NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     
@@ -82,16 +78,14 @@
 }
 
 #pragma mark - NSString转Date
-+ (NSDate *)dateFromString:(NSString *)dateString formatter:(NSString*)formatterString
-{
++ (NSDate *)dateFromString:(NSString * _Nullable)dateString formatter:(NSString * _Nullable)formatterString {
     NSDateFormatter *dateFormatter = [NSDate defaultDateFormatter:formatterString];
     NSDate * theDateFromString     = [dateFormatter dateFromString:dateString];
     
     return theDateFromString;
 }
 
-+ (NSDateFormatter *)defaultDateFormatter:(NSString*)formatterString
-{
++ (NSDateFormatter *)defaultDateFormatter:(NSString*)formatterString {
     if (!formatterString) {
         formatterString = DateFormatterString;
     }
@@ -103,15 +97,13 @@
 }
 
 #pragma mark - Date转NSString
-+ (NSString *)stringFromDate:(NSDate *)date formatter:(NSString*)formatterString
-{
++ (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString {
     NSDateFormatter *dateFormatter = [NSDate defaultDateFormatter:formatterString];
     
     return [dateFormatter stringFromDate:date];
 }
 
-+ (NSString *)stringFromDate:(NSDate *)date formatter:(NSString*)formatterString timeZone:(int)timeZone
-{
++ (NSString *)stringFromDate:(NSDate * _Nullable)date formatter:(NSString * _Nullable)formatterString timeZone:(int)timeZone {
     NSDateFormatter *dateFormatter = [NSDate defaultDateFormatter:formatterString];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:3600* (timeZone)]];
     
@@ -119,20 +111,17 @@
 }
 
 #pragma mark - 返回时间戳(NSString)
-+ (NSDate *)dateFromUnixDateString:(NSString *)theUnixDateString
-{
++ (NSDate *)dateFromUnixDateString:(NSString * _Nullable)theUnixDateString {
     return [NSDate dateWithTimeIntervalSince1970:[theUnixDateString doubleValue]];
 }
 
 #pragma mark - 返回时间戳(NSTimeInterval)
-+ (NSDate *)dateFromUnixDate:(NSTimeInterval)theUnixDate
-{
++ (NSDate *)dateFromUnixDate:(NSTimeInterval)theUnixDate {
     return [NSDate dateWithTimeIntervalSince1970:theUnixDate];
 }
 
 #pragma mark - 获取当前时间戳
-+ (NSTimeInterval)getCurrentUnixDate
-{
++ (NSTimeInterval)getCurrentUnixDate {
     return [[NSDate date] timeIntervalSince1970];
 }
 
@@ -140,15 +129,13 @@
  * 经常返回1480521599.9999971的数据,需要自主四舍五入
  */
 #pragma mark - 获取某个时期的时间戳
-+ (NSTimeInterval)getUnixDateAt:(NSDate *)anotherDate
-{
++ (NSTimeInterval)getUnixDateAt:(NSDate * _Nullable)anotherDate {
     NSTimeInterval time = [[NSDate date] timeIntervalSince1970] - [[NSDate date] timeIntervalSinceDate:anotherDate];
     
     return round(time);
 }
 
-+ (NSString *)stringFromNow:(NSString *)formatterString
-{
++ (NSString *)stringFromNow:(NSString * _Nullable)formatterString {
     NSDateFormatter *dateFormatter = [NSDate defaultDateFormatter:formatterString];
     
     // 上午下午格式
@@ -158,8 +145,7 @@
     return currentDateString;
 }
 
-+ (NSDate *)dateFromNow:(NSString *)formatterString
-{
++ (NSDate *)dateFromNow:(NSString * _Nullable)formatterString {
     NSDateFormatter *dateFormatter = [NSDate defaultDateFormatter:formatterString];
 
     // 上午下午格式
@@ -170,17 +156,17 @@
 }
 
 #pragma mark - 获取时间戳
-+ (NSString *)getTimeStamp:(NSDate *)date
-{
++ (NSString *)getTimeStamp:(NSDate * _Nullable)date {
     return [NSString stringWithFormat:@"%ld", (long)[date timeIntervalSince1970]];
 }
 
 #pragma mark - 获取时差
-+ (int)getZoneHour
-{
-    NSTimeZone * zone=[NSTimeZone localTimeZone];
-    NSString * secondTime=[NSString stringWithReg:zone.description withREG:@"offset\\s+-?\\d+"];
-    secondTime=[NSString stringWithReg:secondTime withREG:@"-?\\d+"];
++ (int)getZoneHour {
+    NSTimeZone * zone     = [NSTimeZone localTimeZone];
+    NSString * secondTime = [zone.description stringWithREG:@"offset\\s+-?\\d+"];
+    //[NSString stringWithReg:zone.description withREG:];
+    secondTime            = [secondTime stringWithREG:@"-?\\d+"];
+   // [NSString stringWithReg:secondTime withREG:];
     NSLog(@"____________description: %@", zone.description);
     NSLog(@"____________secondTime: %@", secondTime);
     NSLog(@"____________zoneTime  : %i", (int)([secondTime integerValue]/3600));

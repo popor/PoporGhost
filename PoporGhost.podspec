@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporGhost'
-  s.version          = '0.1.03'
+  s.version          = '1.01'
   s.summary          = 'PoporGhost: 方便测试数据, 将测试数据转变为dic,通过yyCache保存到磁盘,可以在下一次恢复,适用于大量输入数据的情况.'
   
   s.homepage         = 'https://github.com/popor/PoporGhost'

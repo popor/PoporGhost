@@ -8,7 +8,7 @@
 #import "PoporGhostInteractor.h"
 
 #import <YYCache/YYCache.h>
-#import <PoporFoundation/NSDate+Tool.h>
+#import <PoporFoundation/NSDate+pTool.h>
 
 @interface PoporGhostInteractor ()
 

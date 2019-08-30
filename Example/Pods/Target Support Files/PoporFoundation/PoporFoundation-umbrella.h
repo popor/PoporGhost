@@ -10,14 +10,14 @@
 #endif
 #endif
 
-#import "NSDate+Tool.h"
-#import "NSString+email.h"
-#import "NSString+format.h"
-#import "NSString+IDCard.h"
-#import "NSString+MD5.h"
-#import "NSString+Size.h"
-#import "NSString+Tool.h"
-#import "PrefixOs.h"
+#import "NSDate+pTool.h"
+#import "NSString+pAtt.h"
+#import "NSString+pEmail.h"
+#import "NSString+pIDCard.h"
+#import "NSString+pMD5.h"
+#import "NSString+pSize.h"
+#import "NSString+pTool.h"
+#import "Os+pPrefix.h"
 
 FOUNDATION_EXPORT double PoporFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char PoporFoundationVersionString[];
